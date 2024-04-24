@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial,sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: hsl(0, 83%, 48%);
+            color: #22abb5;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #dae635;
+            border-radius: 5px;
+        }
+        input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #19e906;
+            color: #010e03;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encuesta de Satisfacción ✏️</h1>
+    </header>
+    <form action="#">
+        <label for="nombre">Nombre completo:</label>
+        <input type="nombre" id="nombre" name="nombre" required>
+        <label for="email">Ingrese su correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="producto">¿Qué tipo de producto compraste?</label>
+        <select id="producto" name="producto" required>
+            <option value="">Seleccione un producto</option>
+            <option value="Plumones">Plumones</option>
+            <option value="Cuadernos">Cuadernos</option>
+            <option value="Pinturas">Pinturas</option>
+            <option value="Mochila">Mochila</option>
+            <option value="Otro">Otro</option>
+        </select>
+        <label for="precio">¿Qué opinas acerca de su precio?</label>
+        <select id="precio" name="precio" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Muy barato">Muy barato</option>
+            <option value="No tan barato pero accesible">No tan barato pero accesible</option>
+            <option value="Demasiado caro">Demasiado caro</option>
+        </select>
+        <label for="expectativas">¿Fue lo que esperabas?</label>
+        <select id="expectativas" name="expectativas" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+        </select>
+        <label for="trato">¿Recibió un buen trato en la sucursal?</label>
+        <select id="trato" name="trato" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+            <option value="Regular">Regular el trato</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Gracias por haber respondido nuestra encuesta');
+            // Aquí podrías agregar el código para enviar los datos a un servidor si lo necesitas
+        });
+    </script>
+</body>
+</html>
